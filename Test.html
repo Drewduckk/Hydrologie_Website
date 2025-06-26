@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Suchleiste Beispiel</title>
+  <style>
+    #searchBar {
+      display: none;
+      margin-top: 10px;
+    }
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="toggleSearch()">🔍 Suche öffnen</button>
+
+  <div id="searchBar">
+    <input type="text" id="searchInput" placeholder="Suchbegriff eingeben...">
+    <button onclick="searchPage()">Suchen</button>
+  </div>
+
+  <div id="content">
+    <p>Das ist ein Beispieltext auf dieser Seite. Du kannst nach Wörtern suchen.</p>
+    <p>HTML ist eine Auszeichnungssprache für Webseiten.</p>
+    <p>JavaScript wird für Interaktivität verwendet.</p>
+  </div>
+
+  <script>
+    function toggleSearch() {
+      const bar = document.getElementById("searchBar");
+      bar.style.display = (bar.style.display === "none") ? "block" : "none";
+    }
+
+    function searchPage() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const content = document.getElementById("content");
+      const paragraphs = content.getElementsByTagName("p");
+
+      // Alte Hervorhebungen entfernen
+      for (let p of paragraphs) {
+        p.innerHTML = p.textContent;
+      }
+
+      if (!input) return;
+
+      for (let p of paragraphs) {
+        const text = p.textContent;
+        if (text.toLowerCase().includes(input)) {
+          const regex = new RegExp(`(${input})`, "gi");
+          p.innerHTML = text.replace(regex, '<span class="highlight">$1</span>');
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
