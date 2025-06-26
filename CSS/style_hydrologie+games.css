@@ -12,48 +12,47 @@ header {
     border-radius: 12px;
 
 
-    .header-container {
-        display: flex;
-        justify-content: space-between; /* Place the first item at the far left, the last item at the far right, and evenly space out the items in between. (Push logo left, buttons right) */
-        align-items: center;            /* Align vertically in the middle */
-        flex-wrap: wrap;
-        padding: 10px;
-    }
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Place the first item at the far left, the last item at the far right, and evenly space out the items in between. (Push logo left, buttons right) */
+    align-items: center;            /* Align vertically in the middle */
+    flex-wrap: wrap;
+    padding: 10px;
+  }
 
-    .logo img {
-        display: block;
-        max-height: 200px;
-        margin-left: 50px;
-    }
+.logo img {
+    display: block;
+    max-height: 200px;
+    margin-left: 50px;
+}
 
-    .nav-buttons {
-        display: flex;
-        gap: 5px; /* This will make all the children of .nav-buttons line up in a row (horizontally) by default. */
-        flex-wrap: wrap; /* This tells the flex: "If there’s not enough space on one line, allow the items to wrap onto the next line." */
-        margin: 10px;
-    }
+.nav-buttons {
+    display: flex;
+    gap: 5px; /* This will make all the children of .nav-buttons line up in a row (horizontally) by default. */
+    flex-wrap: wrap; /* This tells the flex: "If there’s not enough space on one line, allow the items to wrap onto the next line." */
+    margin: 10px;
+}
 
-    .header-button {
-        display: inline-block;           /* Needed for padding to work on <a>. This makes the <a> tag behave like a block while still sitting inline with text. */
-        background-color: rgb(255, 255, 255);
-        color: black;                  /* Sets the text color inside the button */
-        text-decoration: none;           /* Removes the default underline from <a> links. Makes it look more like a button and less like a regular hyperlink. */
-        padding: 10px 20px;              /* padding = space between button(element) conntent and button(element) border */
-        border-radius: 0px;              /* Controls how rounded the corners are. The higher the number the more round is the corner */
-        font-weight: bold;               /* Bold means the text appears thicker and darker than normal — it stands out more. With font-weight you can decide how the text will look, (How thin orlight it should look) */
-        transition: background-color 0.3s, transform 0.2s;  /* Adds a smooth animation when the button is hovered or focused.
-                                                                background-color 0.3s: fades the color change over 0.3 seconds.
-                                                                transform 0.2s: animates things like scale() (e.g. slight zoom on hover). */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);         /* Adds a shadow behind the button for depth. 0 (horizontal), 2px (vertical), 5px (blur), with slight transparency.
-                                                            Makes the button feel slightly elevated. */
-        font-family: "Arial", sans-serif;                   /* Text typ, it shows Arial, but if that doesn't exists, it falls back to any style from sans-serif */
-    }
+.header-button {
+    display: inline-block;           /* Needed for padding to work on <a>. This makes the <a> tag behave like a block while still sitting inline with text. */
+    background-color: rgb(255, 255, 255);
+    color: black;                  /* Sets the text color inside the button */
+    text-decoration: none;           /* Removes the default underline from <a> links. Makes it look more like a button and less like a regular hyperlink. */
+    padding: 10px 20px;              /* padding = space between button(element) conntent and button(element) border */
+    border-radius: 0px;              /* Controls how rounded the corners are. The higher the number the more round is the corner */
+    font-weight: bold;               /* Bold means the text appears thicker and darker than normal — it stands out more. With font-weight you can decide how the text will look, (How thin orlight it should look) */
+    transition: background-color 0.3s, transform 0.2s;  /* Adds a smooth animation when the button is hovered or focused.
+                                                            background-color 0.3s: fades the color change over 0.3 seconds.
+                                                            transform 0.2s: animates things like scale() (e.g. slight zoom on hover). */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);         /* Adds a shadow behind the button for depth. 0 (horizontal), 2px (vertical), 5px (blur), with slight transparency.
+                                                           Makes the button feel slightly elevated. */
+    font-family: "Arial", sans-serif;                   /* Text typ, it shows Arial, but if that doesn't exists, it falls back to any style from sans-serif */
+}
 
-    .header-button:hover {
-        background-color: black;
-        color: white;
-        cursor: pointer;
-    }
+.header-button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
 }
 
 body {
