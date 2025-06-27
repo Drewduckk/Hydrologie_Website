@@ -10,7 +10,7 @@ header {
     padding: 10px 0;
     background-color: rgba(255, 255, 255, 0.95); /* rgba stands for: Red, Green, Blue, Alpha / The last number (0.95) is the transparency / In this case White, 95% see-through */
     border-radius: 12px;
-
+}
 
 .header-container {
     display: flex;
